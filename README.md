@@ -15,7 +15,7 @@ The phone and OLED device communicates over BLE and React-Native servers as a br
 
 The app is not published to any store yet and has to be complied and run locally
 
-1. Put the Google SDK API key to
+1. Put the Google SDK API key inside AppDelegate.mn file. Follow Google's SDK instructions to generate one.
 
 2. Install dependencies
 
