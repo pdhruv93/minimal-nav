@@ -8,6 +8,7 @@ import {
 } from '@googlemaps/react-native-navigation-sdk';
 import {useState, useCallback, useMemo, useEffect} from 'react';
 import {connectToBLEDevice, sendDataToESP32} from '../ble-manager';
+import {maneuverImageNames} from './maneuverImageNames';
 
 export function useGuidedNavigation() {
   const [_mapViewController, setMapViewController] =
@@ -35,6 +36,7 @@ export function useGuidedNavigation() {
         instruction: step.currentStep.instruction,
         distanceRemainingInMetres: step.distanceToFinalDestinationMeters,
         timeRemainingInSec: step.timeToFinalDestinationSeconds,
+        maneuverImageName: `${maneuverImageNames[step.maneuver]}.png`,
       };
 
       // send data to BLE device
@@ -102,10 +104,10 @@ export function useGuidedNavigation() {
       );
 
       navigationController.setTurnByTurnLoggingEnabled(true);
-      await navigationController.startGuidance();
       navigationController.simulator.simulateLocationsAlongExistingRoute({
         speedMultiplier: 3,
       });
+      await navigationController.startGuidance();
     } catch (error) {
       console.error('Error starting navigation', error);
     }
