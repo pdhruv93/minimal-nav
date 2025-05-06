@@ -10,6 +10,8 @@
 #include <demos/lv_demos.h>
 #include "CST816S.h"
 #include "ui.h"
+#include <ArduinoJson.h>
+
 /*To use the built-in examples and demos of LVGL uncomment the includes below respectively.
  *You also need to copy `lvgl/examples` to `lvgl/src/examples`. Similarly for the demos `lvgl/demos` to `lvgl/src/demos`.
  Note that the `lv_examples` library is for LVGL v7 and you shouldn't install it for this version (since LVGL v8)
@@ -36,10 +38,13 @@ CST816S touch(6, 7, 13, 5);	// sda, scl, rst, irq
 class MyCallbacks: public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
       deviceConnected = true;
+      lv_scr_load(ui_NavigationScreen);
     }
 
     void onDisconnect(BLEServer* pServer) {
       deviceConnected = false;
+      lv_scr_load(ui_HomeScreen);
+      lv_label_set_text(ui_Message, "No Bluetooth device connected");
     }
 };
 
@@ -49,6 +54,40 @@ class CharacteristicCallbacks: public BLECharacteristicCallbacks {
       
       Serial.print("Received: ");
       Serial.println(value.c_str());
+
+      // Allocate the JSON document (Static for memory efficiency)
+      StaticJsonDocument<200> doc;
+
+      // Parse the JSON string
+      DeserializationError error = deserializeJson(doc, value);
+
+      if (error) {
+        Serial.print("deserializeJson() failed: ");
+        Serial.println(error.c_str());
+        return;
+      }
+
+      // Extract values
+      const char* nextTurnInMetres = doc["nextTurnInMetres"];
+      const char* instruction = doc["instruction"];
+      const char* distanceRemainingInMetres = doc["distanceRemainingInMetres"];
+      const char* timeRemainingInSec = doc["timeRemainingInSec"];
+      const char* maneuverImageName = doc["maneuverImageName"];
+
+      // Print values
+      Serial.println("Parsed JSON:");
+      Serial.print("nextTurnInMetres: "); Serial.println(nextTurnInMetres);
+      Serial.print("instruction: "); Serial.println(instruction);
+      Serial.print("distanceRemainingInMetres: "); Serial.println(distanceRemainingInMetres);
+      Serial.print("timeRemainingInSec: "); Serial.println(timeRemainingInSec);     
+      Serial.print("maneuverImageName: "); Serial.println(maneuverImageName);        
+
+      // update UI labels with data
+      lv_label_set_text(ui_NextTurnDistance, nextTurnInMetres);
+      lv_label_set_text(ui_Instruction, instruction);
+      lv_label_set_text(ui_RemainingDistance, distanceRemainingInMetres);
+      lv_label_set_text(ui_RemainingTime, timeRemainingInSec);
+      lv_img_set_src(ui_DirectionImage, maneuverImageName);
     }
 };
 
