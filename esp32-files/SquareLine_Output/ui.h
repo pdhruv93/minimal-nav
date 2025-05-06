@@ -25,13 +25,20 @@ extern "C" {
 #include "ui_helpers.h"
 #include "ui_events.h"
 
-// SCREEN: ui_DestinationInfo
-void ui_DestinationInfo_screen_init(void);
-extern lv_obj_t *ui_DestinationInfo;
-extern lv_obj_t *ui_Image1;
+// SCREEN: ui_HomeScreen
+void ui_HomeScreen_screen_init(void);
+extern lv_obj_t *ui_HomeScreen;
+extern lv_obj_t *ui_Message;
+// CUSTOM VARIABLES
+
+// SCREEN: ui_NavigationScreen
+void ui_NavigationScreen_screen_init(void);
+extern lv_obj_t *ui_NavigationScreen;
+extern lv_obj_t *ui_DirectionImage;
 extern lv_obj_t *ui_NextTurnDistance;
-extern lv_obj_t *ui_NextTurnInstruction;
-extern lv_obj_t *ui_Label3;
+extern lv_obj_t *ui_Instruction;
+extern lv_obj_t *ui_RemainingTime;
+extern lv_obj_t *ui_RemainingDistance;
 // CUSTOM VARIABLES
 
 // EVENTS

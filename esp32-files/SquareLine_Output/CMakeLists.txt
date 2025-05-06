@@ -1,4 +1,5 @@
-SET(SOURCES ui_DestinationInfo.c
+SET(SOURCES ui_HomeScreen.c
+    ui_NavigationScreen.c
     ui.c
     ui_comp_hook.c
     ui_helpers.c

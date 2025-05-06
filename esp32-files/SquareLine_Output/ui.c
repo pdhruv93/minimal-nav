@@ -8,13 +8,20 @@
 
 ///////////////////// VARIABLES ////////////////////
 
-// SCREEN: ui_DestinationInfo
-void ui_DestinationInfo_screen_init(void);
-lv_obj_t *ui_DestinationInfo;
-lv_obj_t *ui_Image1;
+// SCREEN: ui_HomeScreen
+void ui_HomeScreen_screen_init(void);
+lv_obj_t *ui_HomeScreen;
+lv_obj_t *ui_Message;
+// CUSTOM VARIABLES
+
+// SCREEN: ui_NavigationScreen
+void ui_NavigationScreen_screen_init(void);
+lv_obj_t *ui_NavigationScreen;
+lv_obj_t *ui_DirectionImage;
 lv_obj_t *ui_NextTurnDistance;
-lv_obj_t *ui_NextTurnInstruction;
-lv_obj_t *ui_Label3;
+lv_obj_t *ui_Instruction;
+lv_obj_t *ui_RemainingTime;
+lv_obj_t *ui_RemainingDistance;
 // CUSTOM VARIABLES
 
 // EVENTS
@@ -41,7 +48,8 @@ void ui_init( void )
 lv_disp_t *dispp = lv_disp_get_default();
 lv_theme_t *theme = lv_theme_default_init(dispp, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED), false, LV_FONT_DEFAULT);
 lv_disp_set_theme(dispp, theme);
-ui_DestinationInfo_screen_init();
+ui_HomeScreen_screen_init();
+ui_NavigationScreen_screen_init();
 ui____initial_actions0 = lv_obj_create(NULL);
-lv_disp_load_scr( ui_DestinationInfo);
+lv_disp_load_scr( ui_HomeScreen);
 }
