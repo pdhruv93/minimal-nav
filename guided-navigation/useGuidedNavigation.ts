@@ -9,6 +9,11 @@ import {
 import {useState, useCallback, useMemo, useEffect} from 'react';
 import {connectToBLEDevice, sendDataToESP32} from '../ble-manager';
 import {maneuverImageNames} from './maneuverImageNames';
+import {type GooglePlaceDetail} from 'react-native-google-places-autocomplete';
+import Toast from 'react-native-toast-message';
+import {getCurrentLocation} from './getCurrentLocation';
+
+const origin = getCurrentLocation();
 
 export function useGuidedNavigation() {
   const [_mapViewController, setMapViewController] =
@@ -43,6 +48,10 @@ export function useGuidedNavigation() {
       sendDataToESP32(JSON.stringify(dataToSend));
     } catch (e) {
       console.error('Error preparing data to be sent to BLE', e);
+      Toast.show({
+        type: 'error',
+        text1: 'Error preparing data to be sent to BLE',
+      });
     }
   }, []);
 
@@ -67,36 +76,32 @@ export function useGuidedNavigation() {
     };
   }, [navigationCallbacks, addListeners, removeListeners]);
 
-  const startNavigating = async () => {
+  const startNavigating = async (destinationData: GooglePlaceDetail | null) => {
+    if (!destinationData) {
+      return;
+    }
+
+    const destination = {
+      title: 'Destination',
+      position: {
+        lat: destinationData.geometry.location.lat,
+        lng: destinationData.geometry.location.lng,
+      },
+    };
+
+    const routingOptions = {
+      travelMode: TravelMode.DRIVING,
+      avoidFerries: false,
+      avoidTolls: false,
+    };
+
+    const displayOptions: DisplayOptions = {
+      showDestinationMarkers: true,
+      showStopSigns: true,
+      showTrafficLights: true,
+    };
+
     try {
-      const origin = {
-        title: 'Origin',
-        position: {
-          lat: 60.284821593340155,
-          lng: 24.95173610574237,
-        },
-      };
-
-      const destination = {
-        title: 'Destination',
-        position: {
-          lat: 60.2407165525624,
-          lng: 24.869499072862858,
-        },
-      };
-
-      const routingOptions = {
-        travelMode: TravelMode.DRIVING,
-        avoidFerries: false,
-        avoidTolls: false,
-      };
-
-      const displayOptions: DisplayOptions = {
-        showDestinationMarkers: true,
-        showStopSigns: true,
-        showTrafficLights: true,
-      };
-
       await navigationController.setDestinations(
         [origin, destination],
         routingOptions,
@@ -110,6 +115,11 @@ export function useGuidedNavigation() {
       await navigationController.startGuidance();
     } catch (error) {
       console.error('Error starting navigation', error);
+      Toast.show({
+        type: 'error',
+        text1: 'Error starting navigation',
+        text2: JSON.stringify(error),
+      });
     }
   };
 

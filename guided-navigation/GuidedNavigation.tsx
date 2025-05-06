@@ -1,8 +1,11 @@
 import React from 'react';
 import {NavigationView} from '@googlemaps/react-native-navigation-sdk';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {usePermissions} from './usePermissions';
 import {useGuidedNavigation} from './useGuidedNavigation';
+import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+
+const GOOGLE_MAPS_API_KEY = 'GOOGLE_MAPS_API_KEY';
 
 export function GuidedNavigation() {
   const {arePermissionsApproved} = usePermissions();
@@ -19,6 +22,23 @@ export function GuidedNavigation() {
 
   return (
     <View style={styles.container}>
+      <GooglePlacesAutocomplete
+        placeholder="Enter destination"
+        styles={{
+          container: {
+            flex: 0, // Prevents full height
+          },
+        }}
+        fetchDetails={true}
+        onPress={(_data, details = null) => {
+          startNavigating(details);
+        }}
+        query={{
+          key: GOOGLE_MAPS_API_KEY,
+          language: 'en',
+        }}
+      />
+
       <NavigationView
         androidStylingOptions={{
           primaryDayModeThemeColor: '#34eba8',
@@ -34,7 +54,6 @@ export function GuidedNavigation() {
         onNavigationViewControllerCreated={setNavigationViewController}
         onMapViewControllerCreated={setMapViewController}
       />
-      <Button onPress={() => startNavigating()} title="Start Nav" />
     </View>
   );
 }
@@ -42,5 +61,6 @@ export function GuidedNavigation() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 50,
   },
 });
