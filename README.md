@@ -4,6 +4,7 @@
 
 Show turn by turn navigation info on a small OLEd device using Google Maps on the phone.
 The phone and OLED device communicates over BLE and React-Native servers as a bridge.
+[More details in this article here](https://medium.com/@dhruv-pandey93/turn-by-turn-navigation-on-small-displays-9ea171474095)
 
 ## Tech Stack used
 
