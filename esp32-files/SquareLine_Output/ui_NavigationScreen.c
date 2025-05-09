@@ -28,7 +28,7 @@ lv_obj_set_y( ui_NextTurnDistance, -22 );
 lv_obj_set_align( ui_NextTurnDistance, LV_ALIGN_CENTER );
 lv_obj_set_flex_flow(ui_NextTurnDistance,LV_FLEX_FLOW_ROW);
 lv_obj_set_flex_align(ui_NextTurnDistance, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
-lv_label_set_text(ui_NextTurnDistance,"300m");
+lv_label_set_text(ui_NextTurnDistance,"");
 lv_obj_set_style_text_font(ui_NextTurnDistance, &lv_font_montserrat_48, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 ui_Instruction = lv_label_create(ui_NavigationScreen);
@@ -39,9 +39,9 @@ lv_obj_set_y( ui_Instruction, 53 );
 lv_obj_set_align( ui_Instruction, LV_ALIGN_CENTER );
 lv_obj_set_flex_flow(ui_Instruction,LV_FLEX_FLOW_ROW);
 lv_obj_set_flex_align(ui_Instruction, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
-lv_label_set_text(ui_Instruction,"Turn right onto XYZ road");
+lv_label_set_text(ui_Instruction,"Navigation not started yet");
 lv_obj_set_style_text_align(ui_Instruction, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_text_font(ui_Instruction, &lv_font_montserrat_40, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_Instruction, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 ui_RemainingTime = lv_label_create(ui_NavigationScreen);
 lv_obj_set_width( ui_RemainingTime, LV_SIZE_CONTENT);  /// 1
@@ -51,9 +51,9 @@ lv_obj_set_y( ui_RemainingTime, 155 );
 lv_obj_set_align( ui_RemainingTime, LV_ALIGN_CENTER );
 lv_obj_set_flex_flow(ui_RemainingTime,LV_FLEX_FLOW_ROW);
 lv_obj_set_flex_align(ui_RemainingTime, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
-lv_label_set_text(ui_RemainingTime,"15min");
+lv_label_set_text(ui_RemainingTime,"");
 lv_obj_set_style_text_align(ui_RemainingTime, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_text_font(ui_RemainingTime, &lv_font_montserrat_26, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_RemainingTime, &lv_font_montserrat_36, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 ui_RemainingDistance = lv_label_create(ui_NavigationScreen);
 lv_obj_set_width( ui_RemainingDistance, LV_SIZE_CONTENT);  /// 1
@@ -63,8 +63,8 @@ lv_obj_set_y( ui_RemainingDistance, 189 );
 lv_obj_set_align( ui_RemainingDistance, LV_ALIGN_CENTER );
 lv_obj_set_flex_flow(ui_RemainingDistance,LV_FLEX_FLOW_ROW);
 lv_obj_set_flex_align(ui_RemainingDistance, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
-lv_label_set_text(ui_RemainingDistance,"9km");
+lv_label_set_text(ui_RemainingDistance,"");
 lv_obj_set_style_text_align(ui_RemainingDistance, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_text_font(ui_RemainingDistance, &lv_font_montserrat_26, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_RemainingDistance, &lv_font_montserrat_36, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 }

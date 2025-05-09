@@ -73,7 +73,7 @@ export const sendDataToESP32 = async (text: string) => {
   const base64Data = Buffer.from(text, 'utf8').toString('base64');
 
   try {
-    console.log(':::::::Sending data to BLE device::::::', base64Data);
+    console.log(':::::::Sending data to BLE device::::::', text);
     await writableChar.writeWithResponse(base64Data);
     console.log('::::Data sent to BLE device:::::');
   } catch (err) {

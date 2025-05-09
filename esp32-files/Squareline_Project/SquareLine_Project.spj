@@ -575,7 +575,7 @@
               {
                 "nid": 1030,
                 "strtype": "LABEL/Text",
-                "strval": "300m",
+                "strval": "",
                 "InheritedType": 10
               },
               {
@@ -733,7 +733,7 @@
               {
                 "nid": 1030,
                 "strtype": "LABEL/Text",
-                "strval": "Turn right onto XYZ road",
+                "strval": "Navigation not started yet",
                 "InheritedType": 10
               },
               {
@@ -759,7 +759,7 @@
                       {
                         "nid": 10450,
                         "strtype": "_style/Text_Font",
-                        "strval": "montserrat_40",
+                        "strval": "montserrat_18",
                         "InheritedType": 3
                       }
                     ],
@@ -897,7 +897,7 @@
               {
                 "nid": 1030,
                 "strtype": "LABEL/Text",
-                "strval": "15min",
+                "strval": "",
                 "InheritedType": 10
               },
               {
@@ -923,7 +923,7 @@
                       {
                         "nid": 10450,
                         "strtype": "_style/Text_Font",
-                        "strval": "montserrat_26",
+                        "strval": "montserrat_36",
                         "InheritedType": 3
                       }
                     ],
@@ -1061,7 +1061,7 @@
               {
                 "nid": 1030,
                 "strtype": "LABEL/Text",
-                "strval": "9km",
+                "strval": "",
                 "InheritedType": 10
               },
               {
@@ -1087,7 +1087,7 @@
                       {
                         "nid": 10450,
                         "strtype": "_style/Text_Font",
-                        "strval": "montserrat_26",
+                        "strval": "montserrat_36",
                         "InheritedType": 3
                       }
                     ],
@@ -1239,7 +1239,7 @@
     "rotation": 0,
     "offset_x": 0,
     "offset_y": 0,
-    "shape": "CIRCLE",
+    "shape": "RECTANGLE",
     "multilang": "DISABLE",
     "description": "",
     "board": "Arduino with TFT_eSPI",
@@ -1247,7 +1247,7 @@
     "editor_version": "1.5.1",
     "image": "",
     "export_temp_image": false,
-    "force_export_images": false,
+    "force_export_images": true,
     "flat_export": true,
     "advanced_alpha": false,
     "pointfilter": false,
@@ -1258,7 +1258,7 @@
     "uiExportFolderPath": "/Users/dhruv.pandey/Personal/MinimalNav/esp32-files/SquareLine_Output",
     "projectExportFolderPath": "/Users/dhruv.pandey/Personal/MinimalNav/esp32-files/SquareLine_Output",
     "custom_variable_prefix": "uic",
-    "backup_cnt": 6,
+    "backup_cnt": 7,
     "autosave_cnt": 0,
     "group_color_cnt": 0,
     "lvgl_version": "8.3.11",

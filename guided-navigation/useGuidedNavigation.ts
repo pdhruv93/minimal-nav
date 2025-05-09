@@ -12,6 +12,7 @@ import {maneuverImageNames} from './maneuverImageNames';
 import {type GooglePlaceDetail} from 'react-native-google-places-autocomplete';
 import Toast from 'react-native-toast-message';
 import {getCurrentLocation} from './getCurrentLocation';
+import {formatDistance, formatDuration} from './helpers';
 
 const origin = getCurrentLocation();
 
@@ -37,11 +38,15 @@ export function useGuidedNavigation() {
     try {
       const step = turnByTurn[0];
       const dataToSend = {
-        nextTurnInMetres: step.distanceToCurrentStepMeters,
+        nextTurnDistance: formatDistance(step.distanceToCurrentStepMeters),
         instruction: step.currentStep.instruction,
-        distanceRemainingInMetres: step.distanceToFinalDestinationMeters,
-        timeRemainingInSec: step.timeToFinalDestinationSeconds,
-        maneuverImageName: `${maneuverImageNames[step.maneuver]}.png`,
+        totalDistanceRemaining: formatDistance(
+          step.distanceToFinalDestinationMeters,
+        ),
+        totalTimeRemaining: formatDuration(step.timeToFinalDestinationSeconds),
+        maneuverImageName: `${
+          maneuverImageNames[step.currentStep.maneuver]
+        }.png`,
       };
 
       // send data to BLE device
