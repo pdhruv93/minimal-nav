@@ -330,7 +330,7 @@
                 "strtype": "OBJECT/Position",
                 "intarray": [
                   0,
-                  -113
+                  -115
                 ],
                 "InheritedType": 7
               },
@@ -416,7 +416,7 @@
               {
                 "nid": 1020,
                 "strtype": "IMAGE/Asset",
-                "strval": "",
+                "strval": "assets/ic_destination.png",
                 "InheritedType": 5
               },
               {
@@ -491,7 +491,7 @@
                 "strtype": "OBJECT/Position",
                 "intarray": [
                   0,
-                  -22
+                  5
                 ],
                 "InheritedType": 7
               },
@@ -649,7 +649,7 @@
                 "strtype": "OBJECT/Position",
                 "intarray": [
                   0,
-                  53
+                  79
                 ],
                 "InheritedType": 7
               },
@@ -1245,7 +1245,7 @@
     "editor_version": "1.5.1",
     "image": "",
     "export_temp_image": false,
-    "force_export_images": false,
+    "force_export_images": true,
     "flat_export": true,
     "advanced_alpha": false,
     "pointfilter": false,
@@ -1256,7 +1256,7 @@
     "uiExportFolderPath": "/Users/dhruv.pandey/Personal/MinimalNav/esp32-files/SquareLine_Output",
     "projectExportFolderPath": "/Users/dhruv.pandey/Personal/MinimalNav/esp32-files/SquareLine_Output",
     "custom_variable_prefix": "uic",
-    "backup_cnt": 26,
+    "backup_cnt": 28,
     "autosave_cnt": 0,
     "group_color_cnt": 0,
     "lvgl_version": "8.3.11",

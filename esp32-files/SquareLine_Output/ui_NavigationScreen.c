@@ -11,10 +11,11 @@ ui_NavigationScreen = lv_obj_create(NULL);
 lv_obj_clear_flag( ui_NavigationScreen, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 
 ui_DirectionImage = lv_img_create(ui_NavigationScreen);
+lv_img_set_src(ui_DirectionImage, &ui_img_ic_destination_png);
 lv_obj_set_width( ui_DirectionImage, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_DirectionImage, LV_SIZE_CONTENT);   /// 1
 lv_obj_set_x( ui_DirectionImage, 0 );
-lv_obj_set_y( ui_DirectionImage, -113 );
+lv_obj_set_y( ui_DirectionImage, -115 );
 lv_obj_set_align( ui_DirectionImage, LV_ALIGN_CENTER );
 lv_obj_add_flag( ui_DirectionImage, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
 lv_obj_clear_flag( ui_DirectionImage, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
@@ -23,7 +24,7 @@ ui_NextTurnDistance = lv_label_create(ui_NavigationScreen);
 lv_obj_set_width( ui_NextTurnDistance, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_NextTurnDistance, LV_SIZE_CONTENT);   /// 1
 lv_obj_set_x( ui_NextTurnDistance, 0 );
-lv_obj_set_y( ui_NextTurnDistance, -22 );
+lv_obj_set_y( ui_NextTurnDistance, 5 );
 lv_obj_set_align( ui_NextTurnDistance, LV_ALIGN_CENTER );
 lv_obj_set_flex_flow(ui_NextTurnDistance,LV_FLEX_FLOW_ROW);
 lv_obj_set_flex_align(ui_NextTurnDistance, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
@@ -34,7 +35,7 @@ ui_Instruction = lv_label_create(ui_NavigationScreen);
 lv_obj_set_width( ui_Instruction, lv_pct(80));
 lv_obj_set_height( ui_Instruction, LV_SIZE_CONTENT);   /// 1
 lv_obj_set_x( ui_Instruction, 0 );
-lv_obj_set_y( ui_Instruction, 53 );
+lv_obj_set_y( ui_Instruction, 79 );
 lv_obj_set_align( ui_Instruction, LV_ALIGN_CENTER );
 lv_obj_set_flex_flow(ui_Instruction,LV_FLEX_FLOW_ROW);
 lv_obj_set_flex_align(ui_Instruction, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
