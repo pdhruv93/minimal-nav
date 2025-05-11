@@ -8,7 +8,6 @@ import {
 } from '@googlemaps/react-native-navigation-sdk';
 import {useState, useCallback, useMemo, useEffect} from 'react';
 import {connectToBLEDevice, sendDataToESP32} from '../ble-manager';
-import {maneuverImageNames} from './maneuverImageNames';
 import {type GooglePlaceDetail} from 'react-native-google-places-autocomplete';
 import Toast from 'react-native-toast-message';
 import {getCurrentLocation} from './getCurrentLocation';
@@ -44,9 +43,7 @@ export function useGuidedNavigation() {
           step.distanceToFinalDestinationMeters,
         ),
         totalTimeRemaining: formatDuration(step.timeToFinalDestinationSeconds),
-        maneuverImageName: `${
-          maneuverImageNames[step.currentStep.maneuver]
-        }.png`,
+        maneuverImageIndex: step.currentStep.maneuver,
       };
 
       // send data to BLE device

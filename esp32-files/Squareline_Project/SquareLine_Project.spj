@@ -330,7 +330,7 @@
                 "strtype": "OBJECT/Position",
                 "intarray": [
                   0,
-                  -131
+                  -113
                 ],
                 "InheritedType": 7
               },
@@ -352,7 +352,6 @@
               },
               {
                 "nid": 90,
-                "flags": 1048576,
                 "strtype": "OBJECT/Flags",
                 "InheritedType": 1
               },
@@ -370,7 +369,6 @@
               },
               {
                 "nid": 225,
-                "flags": 1048576,
                 "strtype": "OBJECT/Scrolling",
                 "InheritedType": 1
               },
@@ -418,7 +416,7 @@
               {
                 "nid": 1020,
                 "strtype": "IMAGE/Asset",
-                "strval": "assets/ic_depart.png",
+                "strval": "",
                 "InheritedType": 5
               },
               {
@@ -1239,7 +1237,7 @@
     "rotation": 0,
     "offset_x": 0,
     "offset_y": 0,
-    "shape": "RECTANGLE",
+    "shape": "CIRCLE",
     "multilang": "DISABLE",
     "description": "",
     "board": "Arduino with TFT_eSPI",
@@ -1247,7 +1245,7 @@
     "editor_version": "1.5.1",
     "image": "",
     "export_temp_image": false,
-    "force_export_images": true,
+    "force_export_images": false,
     "flat_export": true,
     "advanced_alpha": false,
     "pointfilter": false,
@@ -1258,7 +1256,7 @@
     "uiExportFolderPath": "/Users/dhruv.pandey/Personal/MinimalNav/esp32-files/SquareLine_Output",
     "projectExportFolderPath": "/Users/dhruv.pandey/Personal/MinimalNav/esp32-files/SquareLine_Output",
     "custom_variable_prefix": "uic",
-    "backup_cnt": 7,
+    "backup_cnt": 26,
     "autosave_cnt": 0,
     "group_color_cnt": 0,
     "lvgl_version": "8.3.11",

@@ -4,6 +4,7 @@
 #include "FT3168.h"
 #include "read_lcd_id_bsp.h"
 #include "ui.h"
+
 static SemaphoreHandle_t lvgl_mux = NULL; //mutex semaphores
 #define LCD_HOST    SPI2_HOST
 

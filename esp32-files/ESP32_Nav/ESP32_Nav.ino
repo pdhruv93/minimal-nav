@@ -52,14 +52,14 @@ class CharacteristicCallbacks: public BLECharacteristicCallbacks {
       const char* instruction = doc["instruction"];
       const char* totalDistanceRemaining = doc["totalDistanceRemaining"];
       const char* totalTimeRemaining = doc["totalTimeRemaining"];
-      const char* maneuverImageName = doc["maneuverImageName"];
+      const char* maneuverImageIndex = doc["maneuverImageIndex"];
 
       // update UI labels with data
       lv_label_set_text(ui_NextTurnDistance, nextTurnDistance);
       lv_label_set_text(ui_Instruction, instruction);
       lv_label_set_text(ui_RemainingDistance, totalDistanceRemaining);
       lv_label_set_text(ui_RemainingTime, totalTimeRemaining);
-      lv_img_set_src(ui_DirectionImage, maneuverImageName);
+      lv_img_set_src(ui_DirectionImage, "F:/ic_destination_right.png");
     }
 };
 

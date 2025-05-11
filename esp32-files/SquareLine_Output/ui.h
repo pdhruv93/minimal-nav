@@ -44,48 +44,6 @@ extern lv_obj_t *ui_RemainingDistance;
 // EVENTS
 extern lv_obj_t *ui____initial_actions0;
 
-// IMAGES AND IMAGE SETS
-LV_IMG_DECLARE( ui_img_ic_depart_png);   // assets/ic_depart.png
-LV_IMG_DECLARE( ui_img_ic_destination_png);   // assets/ic_destination.png
-LV_IMG_DECLARE( ui_img_ic_destination_left_png);   // assets/ic_destination_left.png
-LV_IMG_DECLARE( ui_img_ic_destination_right_png);   // assets/ic_destination_right.png
-LV_IMG_DECLARE( ui_img_ic_ferry_boat_png);   // assets/ic_ferry_boat.png
-LV_IMG_DECLARE( ui_img_ic_ferry_train_png);   // assets/ic_ferry_train.png
-LV_IMG_DECLARE( ui_img_ic_fork_left_png);   // assets/ic_fork_left.png
-LV_IMG_DECLARE( ui_img_ic_fork_right_png);   // assets/ic_fork_right.png
-LV_IMG_DECLARE( ui_img_ic_merge_png);   // assets/ic_merge.png
-LV_IMG_DECLARE( ui_img_ic_merge_left_png);   // assets/ic_merge_left.png
-LV_IMG_DECLARE( ui_img_ic_merge_right_png);   // assets/ic_merge_right.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_clockwise_png);   // assets/ic_roundabout_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_counterclockwise_png);   // assets/ic_roundabout_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_exit_clockwise_png);   // assets/ic_roundabout_exit_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_exit_counterclockwise_png);   // assets/ic_roundabout_exit_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_left_clockwise_png);   // assets/ic_roundabout_left_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_left_counterclockwise_png);   // assets/ic_roundabout_left_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_right_clockwise_png);   // assets/ic_roundabout_right_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_right_counterclockwise_png);   // assets/ic_roundabout_right_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_sharp_left_clockwise_png);   // assets/ic_roundabout_sharp_left_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_sharp_left_counterclockwise_png);   // assets/ic_roundabout_sharp_left_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_sharp_right_clockwise_png);   // assets/ic_roundabout_sharp_right_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_sharp_right_counterclockwise_png);   // assets/ic_roundabout_sharp_right_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_slight_left_clockwise_png);   // assets/ic_roundabout_slight_left_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_slight_left_counterclockwise_png);   // assets/ic_roundabout_slight_left_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_slight_right_clockwise_png);   // assets/ic_roundabout_slight_right_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_slight_right_counterclockwise_png);   // assets/ic_roundabout_slight_right_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_straight_clockwise_png);   // assets/ic_roundabout_straight_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_straight_counterclockwise_png);   // assets/ic_roundabout_straight_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_u_turn_clockwise_png);   // assets/ic_roundabout_u_turn_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_roundabout_u_turn_counterclockwise_png);   // assets/ic_roundabout_u_turn_counterclockwise.png
-LV_IMG_DECLARE( ui_img_ic_straight_png);   // assets/ic_straight.png
-LV_IMG_DECLARE( ui_img_ic_turn_left_png);   // assets/ic_turn_left.png
-LV_IMG_DECLARE( ui_img_ic_turn_right_png);   // assets/ic_turn_right.png
-LV_IMG_DECLARE( ui_img_ic_turn_sharp_left_png);   // assets/ic_turn_sharp_left.png
-LV_IMG_DECLARE( ui_img_ic_turn_sharp_right_png);   // assets/ic_turn_sharp_right.png
-LV_IMG_DECLARE( ui_img_ic_turn_slight_left_png);   // assets/ic_turn_slight_left.png
-LV_IMG_DECLARE( ui_img_ic_turn_slight_right_png);   // assets/ic_turn_slight_right.png
-LV_IMG_DECLARE( ui_img_ic_turn_u_turn_clockwise_png);   // assets/ic_turn_u_turn_clockwise.png
-LV_IMG_DECLARE( ui_img_ic_turn_u_turn_counterclockwise_png);   // assets/ic_turn_u_turn_counterclockwise.png
-
 // UI INIT
 void ui_init(void);
 

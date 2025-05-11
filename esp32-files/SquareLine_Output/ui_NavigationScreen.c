@@ -11,11 +11,10 @@ ui_NavigationScreen = lv_obj_create(NULL);
 lv_obj_clear_flag( ui_NavigationScreen, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 
 ui_DirectionImage = lv_img_create(ui_NavigationScreen);
-lv_img_set_src(ui_DirectionImage, &ui_img_ic_depart_png);
 lv_obj_set_width( ui_DirectionImage, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_DirectionImage, LV_SIZE_CONTENT);   /// 1
 lv_obj_set_x( ui_DirectionImage, 0 );
-lv_obj_set_y( ui_DirectionImage, -131 );
+lv_obj_set_y( ui_DirectionImage, -113 );
 lv_obj_set_align( ui_DirectionImage, LV_ALIGN_CENTER );
 lv_obj_add_flag( ui_DirectionImage, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
 lv_obj_clear_flag( ui_DirectionImage, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
